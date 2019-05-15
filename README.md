@@ -21,7 +21,7 @@ front-end frameworks included.
 1. Rename the template directory from `browser-template-master` to
     `<project-name>-client`.
 1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `TTT Proj` with the name of
+1. Replace all instances of `TTT-Proj` with the name of
     your project.
     - You can search for all instances of text in Atom by pressing
     `commant + shift + f` on Mac or `ctrl + shift + f` on WSL.
