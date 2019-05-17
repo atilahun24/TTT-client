@@ -1,1 +1,24 @@
 @import '~bootstrap/scss/bootstrap';
+
+h1 {
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.col-4 {
+  background: yellow;
+  font-style: bold;
+  text-align: center;
+  height: 100px;
+  border: 1px solid;
+}
+
+.newGame {
+  text-align: center;
+  margin-top: 40px;
+}
