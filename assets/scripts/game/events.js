@@ -18,11 +18,11 @@ const winningCombos = function () {
   (gameBoard[1] !== '' && gameBoard[1] === gameBoard[4] && gameBoard[4] === gameBoard[7]) ||
   (gameBoard[2] !== '' && gameBoard[2] === gameBoard[5] && gameBoard[5] === gameBoard[8])) {
     gameIsOver = true
-    $('#notification').text(`Winner, winner chicken dinner!`)
+    $('#notification').text(`🐔Winner, winner chicken dinner!🐔`)
     console.log('game is over')
   } else if (gameBoard.every(index => index !== '')) {
     gameIsOver = true
-    $('#notification').text('Its a Draw!')
+    $('#notification').text('Game Over. Tis a Draw.')
     console.log('game is over')
   } else {
     console.log('game is not over')

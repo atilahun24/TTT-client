@@ -1,7 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
 
+footer {
+  text-align: center;
+  margin-top: 100px
+}
+
 h1 {
-  color: white;
+  color: #42f4e5;
   background-color: black;
   text-align: center;
 }
@@ -11,7 +16,7 @@ h3 {
 }
 
 .col-4 {
-  background: yellow;
+  background: #42f4e5;
   font-style: bold;
   text-align: center;
   height: 100px;

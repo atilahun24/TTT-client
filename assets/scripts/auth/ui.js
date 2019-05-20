@@ -18,7 +18,7 @@ const onSignUpFailure = responseData => {
 
 const onSignInSuccess = responseData => {
   console.log('success', responseData)
-  $('#message').text('that is correct!')
+  $('#message').text("You're in! Welcome back!")
   $('#message').removeClass()
   $('#message').addClass('success')
 
@@ -50,7 +50,7 @@ const onChangePasswordFailure = () => {
 }
 
 const onSignOutSuccess = () => {
-  $('#message').text('signed out successfully!')
+  $('#message').text('Hate to see you go :/')
   $('#message').removeClass()
   $('#message').addClass('success')
 }
