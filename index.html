@@ -15,6 +15,7 @@
 
 <body>
   <h1>TIC TAC TOE</h1>
+
   <h2 id="message"></h2>
 
   <h2> Sign Up! </h2>
@@ -45,6 +46,7 @@
   </form>
 
 <!-- game board divs/cells -->
+  <h2 id="endMessage"></h2>
   <h2 id="notification"></h2>
 
   <div class="container">
@@ -62,13 +64,21 @@
     </div>
   </div>
 
-  <div class = "newGame">
-    <form>
-      <input type="submit" value="NEW GAME" />
+  <div class ="newGame">
+    <form id ="create">
+      <input type="submit" value="New Game" />
     </form>
   </div>
 
-<footer> Created by Andre W. Tilahun for GA SEI2 course.</footer>
+  <div class ="getGames">
+    <form id ="getGames">
+      <input type="submit" value="Get All Games" />
+    </form>
+  </div>
+
+<footer>
+  <p>Created by Andre W. Tilahun for GA SEI2 course.</p>
+</footer>
 </body>
 
 

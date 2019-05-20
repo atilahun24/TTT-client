@@ -4,7 +4,7 @@ const store = require('../store.js')
 
 const onSignUpSuccess = responseData => {
   console.log('success', responseData)
-  $('#message').text('Signed up successfully!')
+  $('#message').append('<img src="giphy-2.gif" alt="a">')
   $('#message').removeClass()
   $('#message').addClass('success')
 }
