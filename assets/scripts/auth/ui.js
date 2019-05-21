@@ -19,7 +19,8 @@ const onSignInSuccess = responseData => {
   $('#change-pw2').removeClass('hidden')
   $('#wholeContainer').removeClass('hidden')
   $('#createForHide').removeClass('hidden')
-
+  $('#sign-in2').addClass('hidden')
+  $('#sign-up2').addClass('hidden')
   // whenever we sign in successfully, the user is returned in the response so we store it
   // for any of our authenticated API calls
   // 'responseData.user' contains 'responseData.user.token'
@@ -55,6 +56,8 @@ const onSignOutSuccess = () => {
   $('#wholeContainer').addClass('hidden')
   $('#createForHide').addClass('hidden')
   $('#notification').addClass('hidden')
+  $('#sign-in2').removeClass('hidden')
+  $('#sign-up2').removeClass('hidden')
 }
 
 const onSignOutFailure = () => {

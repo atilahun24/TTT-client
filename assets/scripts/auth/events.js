@@ -46,7 +46,7 @@ const onSignOut = event => {
   const form = event.target
   const formData = getFormFields(form)
 
-  console.log('sign out pressed', formData)
+  // console.log('sign out pressed', formData)
   api.signOut(formData)
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
