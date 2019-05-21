@@ -33,23 +33,27 @@
     <input type="submit" value="Sign In" />
   </form>
 
+  <div id ="change-pw2" class = "hidden">
   <h2>Change Password</h2>
   <form id="change-pw">
     <input type="password" name="passwords[old]" placeholder="Old Password" />
     <input type="password" name="passwords[new]" placeholder="New Password" />
     <input type="submit" value="Change Password" />
   </form>
+  </div>
 
+  <div id = "sign-out2" class = "hidden">
   <h2> Sign Out </h2>
   <form id="sign-out">
     <input type="submit" value="Sign Out 👋" />
   </form>
+</div>
 
 <!-- game board divs/cells -->
   <h2 id="endMessage"></h2>
   <h2 id="notification"></h2>
 
-  <div class="container">
+  <div class="container hidden">
     <h3>Play Here</h3>
     <div class="row">
       <div class="col-4 box" data-box-number="0"></div>
@@ -64,13 +68,13 @@
     </div>
   </div>
 
-  <div class ="newGame">
+  <div class ="newGame hidden">
     <form id ="create">
       <input type="submit" value="New Game" />
     </form>
   </div>
 
-  <div class ="getGames">
+  <div class ="getGames hidden">
     <form id ="getGames">
       <input type="submit" value="Get All Games" />
     </form>
