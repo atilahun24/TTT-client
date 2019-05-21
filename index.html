@@ -22,7 +22,7 @@
   <form id="sign-up">
     <input type="email" name="credentials[email]" placeholder="Enter Email" />
     <input type="password" name="credentials[password]" placeholder="Enter a Password" />
-    <input type="password_confirmation" name="credentials[password_confirmation]" placeholder="Confirm Your Password" />
+    <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Your Password" />
     <input type="submit" value="Sign Up" />
   </form>
 
@@ -53,7 +53,7 @@
   <h2 id="endMessage"></h2>
   <h2 id="notification"></h2>
 
-  <div class="container hidden">
+  <div class="container hidden" id="wholeContainer">
     <h3>Play Here</h3>
     <div class="row">
       <div class="col-4 box" data-box-number="0"></div>
@@ -68,7 +68,7 @@
     </div>
   </div>
 
-  <div class ="newGame hidden">
+  <div class ="newGame hidden" id="createForHide">
     <form id ="create">
       <input type="submit" value="New Game" />
     </form>

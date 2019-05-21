@@ -17,6 +17,7 @@ h1 {
 
 h2 {
   color: #b8e1fc;
+  text-align: center;
 }
 
 h3 {
@@ -43,11 +44,29 @@ h3 {
 
 .hidden {
   display: none;
+  font-size: 25px;
+  text-align: center;
+
+}
+
+.message {
+  text-align: center;
 }
 
 .newGame {
   text-align: center;
   margin-top: 40px;
+  text-decoration-color: green
+}
+
+#change-pw,
+#sign-out {
+  text-align: center;
+}
+
+#sign-up,
+#sign-in {
+  text-align: center;
 }
 
 #notification {

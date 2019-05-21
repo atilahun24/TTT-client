@@ -14,9 +14,11 @@ const onSignUpFailure = responseData => {
 
 const onSignInSuccess = responseData => {
   console.log('success', responseData)
-  $('#message').text("You're in! Welcome back!")
+  $('#message').text("You're in! Welcome!")
   $('#sign-out2').removeClass('hidden')
   $('#change-pw2').removeClass('hidden')
+  $('#wholeContainer').removeClass('hidden')
+  $('#createForHide').removeClass('hidden')
 
   // whenever we sign in successfully, the user is returned in the response so we store it
   // for any of our authenticated API calls
@@ -48,6 +50,11 @@ const onChangePasswordFailure = () => {
 const onSignOutSuccess = () => {
   $('#message').text('Hate to see you go :/')
   $('#message').addClass('hidden')
+  $('#sign-out2').addClass('hidden')
+  $('#change-pw2').addClass('hidden')
+  $('#wholeContainer').addClass('hidden')
+  $('#createForHide').addClass('hidden')
+  $('#notification').addClass('hidden')
 }
 
 const onSignOutFailure = () => {

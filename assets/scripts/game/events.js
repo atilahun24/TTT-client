@@ -3,6 +3,7 @@
 const ui = require('./ui.js')
 const api = require('./api.js')
 const store = require('../store')
+const responseData = require('./ui.js')
 
 let currentPlayer = 'X'
 // let gameBoard = ['', '', '', '', '', '', '', '', '']
@@ -23,16 +24,16 @@ const winningCombos = function () {
     (gameBoard[1] !== '' && gameBoard[1] === gameBoard[4] && gameBoard[4] === gameBoard[7]) ||
     (gameBoard[2] !== '' && gameBoard[2] === gameBoard[5] && gameBoard[5] === gameBoard[8])) {
     gameIsOver = true
-    $('#notification').text(`🐔Winner, winner chicken dinner!🐔`)
-    console.log('game is over')
+    $('#notification').html('<img src="public/tenor.gif" alt="nye">')
+    // console.log('game is over')
     return true
   } else if (gameBoard.every(index => index !== '')) {
     gameIsOver = true
-    $('#notification').text('Game Over. Tis a Draw.')
-    console.log('game is over')
+    $('#notification').html('<img src="public/71713888.gif" alt="future">')
+    // console.log('game is over')
     return true
   } else {
-    console.log('game is not over')
+    // console.log('game is not over')
     return false
   }
 }
@@ -40,7 +41,7 @@ const winningCombos = function () {
 const onBoxClick = function (event) {
   const boxNumber = $(event.target).data('box-number')
   $('#message').text('')
-  console.log(boxNumber)
+  // console.log(boxNumber)
   const text = $(event.target).text()
   if (!gameIsOver && text === '') {
     store.game.cells[boxNumber] = currentPlayer
@@ -62,11 +63,12 @@ const endOfGame = function () {
   if (gameIsOver === true) {
     $('.container').hide(500)
     setTimeout(function () {
-      $('#endMessage').text('')
+      $('#endMessage').text('You have played ' + responseData.games.length + 'game(s)')
     }, 1500)
     $('#message').hide()
     $('#endMessage').show()
     currentPlayer = 'X'
+    // $('#notification').text('You have played ' + responseData.games.length + 'game(s)')
   }
 }
 
