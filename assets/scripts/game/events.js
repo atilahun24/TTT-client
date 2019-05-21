@@ -27,14 +27,14 @@ const winningCombos = function () {
     (gameBoard[2] !== '' && gameBoard[2] === gameBoard[5] && gameBoard[5] === gameBoard[8])) {
     gameIsOver = true
     $('#notification').html('<img src="public/tenor.gif" alt="nye">')
-    $('#endMessage').text('You have played ' + responseData.games.length + 'game(s)')
+    // $('#endMessage').text('You have played ' + responseData.games.length + 'game(s)')
     // console.log('game is over')
-    console.log(responseData.games.length)
+    // console.log(responseData.games.length)
     return true
   } else if (gameBoard.every(index => index !== '')) {
     gameIsOver = true
     $('#notification').html('<img src="public/71713888.gif" alt="future">')
-    $('#endMessage').text('You have played ' + responseData.games.length + 'game(s)')
+    // $('#endMessage').text('You have played ' + responseData.games.length + 'game(s)')
     // console.log('game is over')
     return true
   } else {
