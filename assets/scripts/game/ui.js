@@ -2,14 +2,20 @@ const store = require('../store')
 
 const newGameSuccess = function (data) {
   store.game = data.game
-  console.log(store.game)
+  // console.log(store.game)
   $('.box').text('')
-  $('.container').show(600)
+  $('#wholeContainer').removeClass('hidden')
+  $('#createForHide').removeClass('hidden')
 }
 
 const newGameFailure = function () {
   $('#message').text('This has been an absolute misfire')
 }
+
+const getAllGamesSuccess = function (responseData) {
+  $('#endMessage').text('You have played ' + responseData.games.length + ' games!')
+}
+//
 
 // const onUpdateSuccess = function () {
 //
@@ -17,5 +23,6 @@ const newGameFailure = function () {
 
 module.exports = {
   newGameSuccess,
-  newGameFailure
+  newGameFailure,
+  getAllGamesSuccess
 }

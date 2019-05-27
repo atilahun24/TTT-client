@@ -26,14 +26,14 @@ const winningCombos = function () {
     (gameBoard[1] !== '' && gameBoard[1] === gameBoard[4] && gameBoard[4] === gameBoard[7]) ||
     (gameBoard[2] !== '' && gameBoard[2] === gameBoard[5] && gameBoard[5] === gameBoard[8])) {
     gameIsOver = true
-    $('#notification').html('<img src="public/tenor.gif" alt="nye">')
+    $('#notification').html('<img src="public/tenor.gif" alt="nye">' + `<div>${currentPlayer} wins</div>`)
     // $('#endMessage').text('You have played ' + responseData.games.length + 'game(s)')
     // console.log('game is over')
     // console.log(responseData.games.length)
     return true
   } else if (gameBoard.every(index => index !== '')) {
     gameIsOver = true
-    $('#notification').html('<img src="public/71713888.gif" alt="future">')
+    $('#notification').html('<img src="public/71713888.gif" alt="future">' + `<div>it's a draw!</div>`)
     // $('#endMessage').text('You have played ' + responseData.games.length + 'game(s)')
     // console.log('game is over')
     return true
@@ -52,7 +52,7 @@ const onBoxClick = function (event) {
     store.game.cells[boxNumber] = currentPlayer
     winningCombos()
     api.updateGame(boxNumber, currentPlayer, gameIsOver)
-      .then((data) => console.log(data))
+    // .then((data) => console.log(data))
     $(event.target).text(currentPlayer)
     if (currentPlayer === 'X') {
       currentPlayer = 'O'
@@ -67,6 +67,7 @@ const onBoxClick = function (event) {
 const endOfGame = function () {
   if (gameIsOver === true) {
     $('.container').hide(500)
+    api.getGames()
     setTimeout(function () {
       $('#endMessage').text('You have played ' + responseData.games.length + 'game(s)')
     }, 1500)
@@ -89,6 +90,14 @@ const newGame = function (event) {
   currentPlayer = 'O'
   gameIsOver = false
 }
+
+const onGetAllGamesClick = function (event) {
+  event.preventDefault()
+  api.getGames()
+    .then(ui.getAllGamesSuccess)
+    .catch(ui.getAllGamesFailure)
+}
+
 // const newGame = function () {
 //   event.preventDefault()
 //
@@ -102,5 +111,6 @@ module.exports = {
   winningCombos,
   endOfGame,
   newGame,
-  gamesPlayed
+  gamesPlayed,
+  onGetAllGamesClick
 }

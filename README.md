@@ -1,4 +1,4 @@
-Insert description og project here
+Insert description of project here
 
 technologies used:
 HTML, CSS, jQuery, JavaScript, AJAX
@@ -14,3 +14,8 @@ user stories:
 2) As a developer, I would like to create a bug free tic tac toe
 3) As an instructor for this course, I would to see clear and bug free code
 4) As a user, I would like the presentation of the game to be aesthetically pleasing
+
+unsolved problems:
+
+1) find better text colors to contrast background
+2) have change password and get all games in a drop down menu
