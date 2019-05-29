@@ -6,6 +6,7 @@ const newGameSuccess = function (data) {
   $('.box').text('')
   $('#wholeContainer').removeClass('hidden')
   $('#createForHide').removeClass('hidden')
+  $('#notification').removeClass('hidden')
 }
 
 const newGameFailure = function () {
@@ -13,6 +14,7 @@ const newGameFailure = function () {
 }
 
 const getAllGamesSuccess = function (responseData) {
+  $('#endMessage').removeClass('hidden')
   $('#endMessage').text('You have played ' + responseData.games.length + ' games!')
 }
 //

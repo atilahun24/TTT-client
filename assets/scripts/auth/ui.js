@@ -11,6 +11,7 @@ const onSignUpSuccess = responseData => {
 
 const onSignUpFailure = responseData => {
   // console.log('failure', responseData)
+  $('#message').removeClass('hidden')
   $('#message').text('Sign up failed :( ')
 }
 
@@ -55,7 +56,7 @@ const onChangePasswordFailure = () => {
 
 const onSignOutSuccess = () => {
   $('#message').text('Hate to see you go :/')
-  $('#message').addClass('hidden')
+  setTimeout(() => $('#message').hide(), 5000)
   $('#sign-out2').addClass('hidden')
   $('#change-pw2').addClass('hidden')
   $('#wholeContainer').addClass('hidden')
