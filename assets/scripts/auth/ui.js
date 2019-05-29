@@ -37,7 +37,7 @@ const onSignInSuccess = responseData => {
 const onSignInFailure = responseData => {
   // console.log('failure', responseData)
   $('#message').html('<img src="public/giphy-2.gif" alt="a">')
-  $('#message').removeClass()
+  $('#message').removeClass('hidden')
   $('#message').addClass('failure')
 }
 
