@@ -14,6 +14,7 @@ const onSignUpFailure = responseData => {
   // console.log('failure', responseData)
   $('#message').removeClass('hidden')
   $('#message').text('Sign up failed :( ')
+  $('form').trigger('reset')
 }
 
 const onSignInSuccess = responseData => {
@@ -41,6 +42,7 @@ const onSignInFailure = responseData => {
   $('#message').html('<img src="public/giphy-2.gif" alt="a">')
   $('#message').removeClass('hidden')
   $('#message').addClass('failure')
+  $('form').trigger('reset')
 }
 
 const onChangePasswordSuccess = () => {
@@ -54,6 +56,7 @@ const onChangePasswordFailure = () => {
   $('#message').text('change password failed ')
   $('#message').removeClass()
   $('#message').addClass('failure')
+  $('form').trigger('reset')
 }
 
 const onSignOutSuccess = () => {
