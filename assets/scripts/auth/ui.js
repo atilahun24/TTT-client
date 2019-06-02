@@ -4,6 +4,7 @@ const store = require('../store.js')
 
 const onSignUpSuccess = responseData => {
   // console.log('success', responseData)
+  $('#message').removeClass('hidden')
   $('#message').text('You have successfully signed up!')
   $('form').trigger('reset')
   $('#sign-up2').addClass('hidden')
@@ -18,6 +19,7 @@ const onSignUpFailure = responseData => {
 const onSignInSuccess = responseData => {
   // console.log('success', responseData)
   $('#createForHide').removeClass('hidden')
+  $('#message').removeClass('hidden')
   $('#message').text("You're in! Welcome!")
   $('#sign-out2').removeClass('hidden')
   $('#change-pw2').removeClass('hidden')
@@ -43,7 +45,7 @@ const onSignInFailure = responseData => {
 
 const onChangePasswordSuccess = () => {
   $('#message').text('changed password successfully!')
-  $('#message').removeClass()
+  // $('#message').removeClass()
   $('#message').addClass('success')
   $('form').trigger('reset')
 }
@@ -56,7 +58,7 @@ const onChangePasswordFailure = () => {
 
 const onSignOutSuccess = () => {
   $('#message').text('Hate to see you go :/')
-  setTimeout(() => $('#message').hide(), 5000)
+  setTimeout(() => $('#message').addClass('hidden'), 2500)
   $('#sign-out2').addClass('hidden')
   $('#change-pw2').addClass('hidden')
   $('#wholeContainer').addClass('hidden')
@@ -70,7 +72,7 @@ const onSignOutSuccess = () => {
 
 const onSignOutFailure = () => {
   $('#message').text('sign out failed ')
-  $('#message').removeClass()
+  // $('#message').removeClass()
   $('#message').addClass('failure')
 }
 
